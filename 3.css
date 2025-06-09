@@ -1,0 +1,441 @@
+/* 3.css */
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #1a1f2e; /* Big Stone */
+  color: #e0e6f0; /* Light Elephant */
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navigation styles */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #263550; /* Blue Zodiac */
+  padding: 15px 30px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  color: #f25c05; /* Orange */
+  font-weight: 700;
+  font-size: 1.5rem;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-link {
+  color: #e0e6f0;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #f25c05; /* Orange highlight */
+}
+
+/* Spacer to push content below fixed header */
+.header-spacer {
+  height: 65px;
+}
+
+/* Hero Section */
+.hero-single-image {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.hero-single-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  filter: brightness(0.5);
+}
+
+.image-dark-overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 14, 27, 0.55); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  color: #f25c05; /* Orange */
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.6);
+  text-align: center;
+}
+
+/* Cards */
+.card {
+  background-color: #263550; /* Blue Zodiac */
+  border-radius: 12px;
+  padding: 25px;
+  margin: 25px 0;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.5s;
+}
+
+.delay-2 {
+  animation-delay: 1s;
+}
+
+.delay-4 {
+  animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Section headings */
+.section-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  color: #f25c05;
+}
+
+/* Feature grid */
+.feature-grid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-box {
+  background-color: #1a1f2e; /* Big Stone */
+  flex: 1;
+  min-width: 220px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-8px);
+}
+
+.feature-box h3 {
+  color: #f25c05;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #1a1f2e;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+}
+
+thead tr {
+  background-color: #f25c05;
+  color: white;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #263550;
+  text-align: left;
+}
+
+tbody tr:hover {
+  background-color: #263550;
+}
+
+/* Section with background images and overlay */
+.section-bg-img {
+  position: relative;
+  margin: 50px 0;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.section-bg-img .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(10, 14, 27, 0.65);
+  z-index: 1;
+}
+
+.content-row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  position: relative;
+  z-index: 2;
+  padding: 30px;
+  color: #e0e6f0;
+}
+
+.text-side {
+  flex: 1;
+}
+
+.text-side h2 {
+  color: #f25c05;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.text-side p {
+  font-size: 1.1rem;
+}
+
+.image-side {
+  flex: 1;
+  height: 250px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+/* Director card */
+.director-card {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #263550;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+}
+
+.director-card img {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #f25c05;
+  margin-bottom: 20px;
+}
+
+.director-card h3 {
+  color: #f25c05;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.director-card p {
+  color: #cfd8f7;
+  font-size: 1rem;
+  margin-bottom: 6px;
+}
+
+/* Contact strip */
+.contact-strip {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1f2e;
+  padding: 20px;
+  gap: 40px;
+  border-radius: 12px;
+  margin: 40px 0;
+  color: #e0e6f0;
+}
+
+.contact-item {
+  font-size: 1.1rem;
+}
+
+.contact-item .label {
+  font-weight: 700;
+  color: #f25c05;
+  margin-right: 6px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #263550;
+  color: #a0aec0;
+  font-size: 0.9rem;
+  border-top: 1px solid #1a1f2e;
+  user-select: none;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .content-row {
+    flex-direction: column;
+  }
+  .image-side, .text-side {
+    width: 100%;
+  }
+  .feature-grid {
+    flex-direction: column;
+  }
+  .nav-links {
+    display: none; /* You can add a mobile menu later */
+  }
+}
+.hero-slider {
+  position: relative;
+  height: 500px; /* Adjust height if needed */
+  overflow: hidden;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slide .hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 2;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  text-shadow: 0 0 8px rgba(0,0,0,0.7);
+}
+/* Container for each section with background image and overlay */
+.section-bg-img {
+  position: relative;
+  margin: 4rem 0;
+  border-radius: 12px;
+  overflow: hidden; /* keep content inside rounded corners */
+}
+
+/* Dark transparent overlay on top of image */
+.section-bg-img .overlay {
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+  border-radius: 12px;
+}
+
+/* Flex container to hold text and image side by side */
+.content-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  position: relative; /* so z-index works */
+  z-index: 2; /* above overlay */
+  padding: 2rem;
+  color: white; /* text color */
+}
+
+/* Text side styling */
+.text-side {
+  flex: 1;
+  z-index: 3; /* keep text above overlay and image */
+  padding: 1rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Image side styling */
+.image-side {
+  flex: 1;
+  height: 300px; /* adjust as needed */
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .content-row {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .image-side, .text-side {
+    width: 100%;
+  }
+
+  .image-side {
+    height: 200px;
+  }
+}
+.logo img {
+  background: none !important;
+  filter: none !important;
+  opacity: 1 !important;
+  width: 5rem; /* or your desired size */
+  height: auto;
+}
+.hero-slider{
+height: 30rem;
+
+}
